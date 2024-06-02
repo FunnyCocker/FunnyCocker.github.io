@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>keyboard tester</title>
+    <title>SpeedyFingers</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/tab.ico">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>mg btw</h1>
+    <header id="site-header">
+        <img src="img/tab.ico" alt="Logo" id="logo">
+        <h1 id="site-title">speedyfingers...</h1>
+        <div id="theme-github-container">
+            <div id="switch-theme-button">🤓</div>
+            <a id="github-link" href="https://github.com/FunnyCocker/FunnyCocker.github.io" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </header>    
+    <div id="overlay"></div>
+    <div id="notification">
+        <h2 id="notification-message">Notification message goes here</h2>
+        <button id="ok-button">Окей</button>
+        <button id="retry-button">Повторить тест</button>
+    </div>
+    
+    <div id="text-display"></div>
+    <input type="text" id="text-input" placeholder="Press Enter to start typing..." disabled>
+    <div id="info-panel">
+        <div id="error-count">Errors: 0</div>
+        <div id="speed-count">WPM: 0 | CPM: 0</div>
+        <div id="timer">Timer: 0</div>
+    </div>
+    <div id="control-panel">
+        <button id="restart-button">Restart</button>
+        <button id="time-30">30 sec</button>
+        <button id="time-60">60 sec</button>
+        <button id="time-120">120 sec</button>
+        <select id="difficulty">
+            <option value="short">Short</option>
+            <option value="medium">Medium</option>
+            <option value="long">Long</option>
+        </select>
+        <button id="language-button">Switch Language</button>
+    </div>
+    <div id="language-select">
+        <button data-lang="en">English</button>
+        <button data-lang="ru">Русский</button>
+        <button data-lang="es">Español</button>
+        <button data-lang="fr">Français</button>
+    </div>
+    <div id="results"></div>
+    
+    <script src="/js/script-fetch.js"></script>
+    <script src="/js/script-init.js"></script>
+    <script src="/js/script-events.js"></script>
+    <script src="/js/script-theme.js"></script>
 </body>
 </html>
